@@ -5,6 +5,7 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
+  Container,
 } from 'reactstrap';
 import img1 from './img1.webp'
 import img2 from './img2.webp'
@@ -64,6 +65,7 @@ function Images(args) {
   });
 
   return (
+    <Container className='mt-2'>
     <Carousel
       activeIndex={activeIndex}
       next={next}
@@ -81,13 +83,14 @@ function Images(args) {
         direction="prev"
         directionText="Previous"
         onClickHandler={previous}
-      />
+        />
       <CarouselControl
         direction="next"
         directionText="Next"
         onClickHandler={next}
-      />
+        />
     </Carousel>
+        </Container>
   );
 }
 
